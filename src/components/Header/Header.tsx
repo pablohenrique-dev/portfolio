@@ -29,12 +29,6 @@ export const Header = () => {
           <Image
             src="/assets/logo.svg"
             alt="Logo com texto Pablo Henrique na cor branca"
-            width={0}
-            height={0}
-            style={{
-              objectFit: "cover",
-            }}
-            sizes="100vw"
             className="w-[11.25rem]"
           />
         </Link>
@@ -61,12 +55,6 @@ export const Header = () => {
               <Image
                 src="/assets/logo.svg"
                 alt="Logo com texto Pablo Henrique"
-                width={0}
-                height={0}
-                style={{
-                  objectFit: "cover",
-                }}
-                sizes="100vw"
                 className="w-[11.25rem]"
               />
             </Link>
@@ -81,12 +69,6 @@ export const Header = () => {
               <Image
                 src="/assets/close-icon.svg"
                 alt="Ícone com dois traços brancos formando um X"
-                width={0}
-                height={0}
-                style={{
-                  objectFit: "cover",
-                }}
-                sizes="100vw"
                 className="w-[1.625rem]"
               />
             </button>
