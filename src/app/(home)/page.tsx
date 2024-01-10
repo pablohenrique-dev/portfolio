@@ -1,10 +1,11 @@
 import { HeroSection } from "./components/HeroSection";
+import { ProjectsSection } from "./components/ProjectsSection";
 
 export default function Home() {
   return (
     <>
       <HeroSection />
-      <section className="h-[100vh] w-full bg-gray-100"></section>
+      <ProjectsSection />
       <section className="h-[100vh] w-full bg-white"></section>
     </>
   );
