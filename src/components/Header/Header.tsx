@@ -79,7 +79,7 @@ export const Header = () => {
           >
             {linksNavMenu.map((link) => {
               return (
-                <NavLink key={link.href} href={link.href}>
+                <NavLink key={link.href} href={link.href} setMobileMenuIsOpen={setMobileMenuIsOpen}>
                   {link.title}
                 </NavLink>
               );
