@@ -4,6 +4,20 @@
 
 @layer utilities {
   .container {
-    @apply px-5 max-w-[78.5rem] mx-auto;
+    @apply mx-auto max-w-[78.5rem] px-5;
+  }
+}
+
+.keen-slider__slide {
+  height: 384px;
+}
+
+.keen-slider {
+  overflow: visible !important;
+}
+
+@media (max-width: 500px) {
+  .keen-slider__slide {
+    height: 320px;
   }
 }
