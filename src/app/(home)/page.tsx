@@ -1,3 +1,4 @@
+import { CertificatesSection } from "./components/CertificatesSection";
 import { HeroSection } from "./components/HeroSection";
 import { ProjectsSection } from "./components/ProjectsSection";
 
@@ -6,7 +7,8 @@ export default function Home() {
     <>
       <HeroSection />
       <ProjectsSection />
-      <section className="h-[100vh] w-full bg-white"></section>
+      <CertificatesSection />
+      <section className="w-full h-screen"></section>
     </>
   );
 }
