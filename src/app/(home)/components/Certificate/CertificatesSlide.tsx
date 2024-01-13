@@ -2,7 +2,6 @@
 
 import React from "react";
 import { CertificateCard, CertificateCardProps } from "./CertificateCard";
-import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
 import { Image } from "@/components/Image";
 
@@ -23,6 +22,7 @@ export const CertificatesSlide = ({
     },
     created() {
       setLoaded(true);
+      console.log("testes");
     },
     defaultAnimation: {
       duration: 200,
@@ -77,7 +77,7 @@ export const CertificatesSlide = ({
             jornada como desenvolvedor front-end.
           </p>
         </div>
-        {loaded && instanceRef.current && (
+        {instanceRef.current && (
           <div className="flex gap-4">
             <button
               onClick={(e: any) =>
@@ -99,7 +99,8 @@ export const CertificatesSlide = ({
               className="bg-gray-100 px-3 py-[14px] transition hover:bg-gray-200 disabled:cursor-not-allowed disabled:opacity-40"
               disabled={
                 currentSlide ===
-                instanceRef.current.track.details.slides.length - buttonSlideController
+                instanceRef.current.track.details.slides.length -
+                  buttonSlideController
               }
             >
               <Image
@@ -111,6 +112,7 @@ export const CertificatesSlide = ({
           </div>
         )}
       </div>
+
       <div ref={sliderRef} className="keen-slider">
         {listCertificates.map((certificate) => {
           return <CertificateCard key={certificate.id} {...certificate} />;
