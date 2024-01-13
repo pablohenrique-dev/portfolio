@@ -1,4 +1,4 @@
-import { TechBadge } from "./TechBadge";
+import { TechBadge } from "@/components/TechBadge";
 import { Image } from "@/components/Image";
 import Link from "next/link";
 

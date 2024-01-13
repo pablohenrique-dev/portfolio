@@ -1,6 +1,6 @@
-import { CertificatesSection } from "./components/CertificatesSection";
+import { CertificatesSection } from "./components/Certificate/CertificatesSection";
 import { HeroSection } from "./components/HeroSection";
-import { ProjectsSection } from "./components/ProjectsSection";
+import { ProjectsSection } from "./components/Project/ProjectsSection";
 
 export default function Home() {
   return (
@@ -8,7 +8,7 @@ export default function Home() {
       <HeroSection />
       <ProjectsSection />
       <CertificatesSection />
-      <section className="w-full h-screen"></section>
+      <section className="h-screen w-full"></section>
     </>
   );
 }
