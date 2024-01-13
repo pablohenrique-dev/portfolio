@@ -51,7 +51,7 @@ export const Header = () => {
           }`}
         >
           <div className="flex items-center justify-between md:hidden">
-            <Link href="/">
+            <Link href="/" onClick={() => setMobileMenuIsOpen(false)}>
               <Image
                 src="/assets/logo.svg"
                 alt="Logo com texto Pablo Henrique"
@@ -79,7 +79,11 @@ export const Header = () => {
           >
             {linksNavMenu.map((link) => {
               return (
-                <NavLink key={link.href} href={link.href} setMobileMenuIsOpen={setMobileMenuIsOpen}>
+                <NavLink
+                  key={link.href}
+                  href={link.href}
+                  setMobileMenuIsOpen={setMobileMenuIsOpen}
+                >
                   {link.title}
                 </NavLink>
               );
