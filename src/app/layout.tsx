@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Epilogue } from "next/font/google";
 import "./globals.css";
+import "keen-slider/keen-slider.min.css";
 import { Header } from "@/components/Header/Header";
 
 const epilogue = Epilogue({ subsets: ["latin"] });
