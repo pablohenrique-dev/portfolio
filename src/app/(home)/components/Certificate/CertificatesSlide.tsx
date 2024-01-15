@@ -22,7 +22,6 @@ export const CertificatesSlide = ({
     },
     created() {
       setLoaded(true);
-      console.log("testes");
     },
     defaultAnimation: {
       duration: 200,
@@ -77,7 +76,7 @@ export const CertificatesSlide = ({
             jornada como desenvolvedor front-end.
           </p>
         </div>
-        {instanceRef.current && (
+        {loaded && instanceRef.current && (
           <div className="flex gap-4">
             <button
               onClick={(e: any) =>

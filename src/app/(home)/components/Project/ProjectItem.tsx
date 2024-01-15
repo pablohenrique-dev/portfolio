@@ -28,7 +28,7 @@ export const ProjectItem = ({
         })}
         <Link
           href={`/projetos/${slug}`}
-          className="mt-2 block text-lg font-medium text-black opacity-80"
+          className="mt-2 block text-lg font-medium text-black opacity-80 transition group-hover:translate-x-2"
         >
           Mais detalhes
         </Link>
