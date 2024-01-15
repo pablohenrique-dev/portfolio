@@ -8,6 +8,10 @@
   }
 }
 
+* {
+  scroll-behavior: smooth;
+}
+
 .keen-slider__slide {
   height: 384px;
 }
