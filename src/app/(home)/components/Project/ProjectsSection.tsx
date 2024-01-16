@@ -1,36 +1,6 @@
 import { Project } from "@/@types/projects";
 import { ProjectItem } from "./ProjectItem";
 
-const listProjects = [
-  {
-    id: 1,
-    slug: "sumup",
-    title: "SumUp redesign",
-    deployUrl: "https://pablohenrique-dev.github.io/sumup-redesign/",
-    repositoryUrl: "https://github.com/pablohenrique-dev/sumup-redesign",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    projectThumb: "/assets/sumup-thumb-webp.webp",
-  },
-  {
-    id: 2,
-    slug: "fintech",
-    title: "Fintech dashboard",
-    deployUrl: "https://fintech-ochre.vercel.app/",
-    repositoryUrl: "https://github.com/pablohenrique-dev/fintech",
-    technologies: ["React", "TypeScript", "Styled Components"],
-    projectThumb: "/assets/sumup-thumb-webp.webp",
-  },
-  {
-    id: 3,
-    slug: "fastmemo",
-    title: "Fastmemo",
-    deployUrl: "/assets/sumup-thumb-webp.webp",
-    repositoryUrl: "https://github.com/pablohenrique-dev/fastmemo",
-    technologies: ["React", "TypeScript", "Tailwind"],
-    projectThumb: "/assets/sumup-thumb-webp.webp",
-  },
-];
-
 type ProjectsSectionProps = {
   projects: Project[];
 };

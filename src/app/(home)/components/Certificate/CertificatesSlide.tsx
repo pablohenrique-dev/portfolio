@@ -4,9 +4,10 @@ import React from "react";
 import { CertificateCard, CertificateCardProps } from "./CertificateCard";
 import { useKeenSlider } from "keen-slider/react";
 import { Image } from "@/components/Image";
+import { Certificate } from "@/@types/certificate";
 
 type CertificatesSlidePorps = {
-  listCertificates: CertificateCardProps[];
+  listCertificates: Certificate[];
 };
 
 export const CertificatesSlide = ({
@@ -114,7 +115,7 @@ export const CertificatesSlide = ({
 
       <div ref={sliderRef} className="keen-slider">
         {listCertificates.map((certificate) => {
-          return <CertificateCard key={certificate.id} {...certificate} />;
+          return <CertificateCard key={certificate.title} {...certificate} />;
         })}
       </div>
     </>

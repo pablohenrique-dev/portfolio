@@ -1,30 +1,25 @@
 "use client";
 
-import { Image } from "@/components/Image";
-import { changeColorOpacity } from "@/utils/changeColorOpacity";
+import { Certificate } from "@/@types/certificate";
+import { CMSIcon } from "@/components/CMSIcon/Index";
 import Link from "next/link";
 import React from "react";
 
-export type CertificateCardProps = {
-  id: number;
-  title: string;
-  icon: string;
-  certificateUrl: string;
-  color: string;
-};
+export type CertificateCardProps = Certificate;
 
 export const CertificateCard = ({
   title,
-  icon,
+  iconSvg,
   certificateUrl,
-  color,
+  cardColor,
 }: CertificateCardProps) => {
   const [isHovered, setIsHovered] = React.useState(false);
 
+  const color = `rgb(${cardColor.rgba.r},${cardColor.rgba.g},${cardColor.rgba.b})`;
+  const boxShadowColor = `rgba(${cardColor.rgba.r},${cardColor.rgba.g},${cardColor.rgba.b}, 0.6)`;
+
   const certificateCardStyle = {
-    boxShadow: isHovered
-      ? `0px 0px 80px 0px ${changeColorOpacity(color, 0.5)}`
-      : "",
+    boxShadow: isHovered ? `0px 0px 80px 0px ${boxShadowColor}` : "",
     border: isHovered ? `1px solid ${color}` : "1px solid rgb(223, 223, 224)",
     background: isHovered ? color : "",
   };
@@ -39,11 +34,7 @@ export const CertificateCard = ({
       style={certificateCardStyle}
     >
       <strong className="text-2xl">{title}</strong>
-      <Image
-        src={icon}
-        alt={`Ícone do ${title}`}
-        className="w-[104px] max-[380px]:w-[88px] sm:w-[120px]"
-      />
+      <CMSIcon icon={iconSvg} />
       <span className="text-base font-bold transition group-hover:translate-x-1">
         Ver certificado
       </span>

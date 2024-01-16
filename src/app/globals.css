@@ -12,6 +12,18 @@
   scroll-behavior: smooth;
 }
 
+/* html,
+body,
+svg {
+  height: 100%;
+} */
+
+svg {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
 .keen-slider__slide {
   height: 384px;
 }
