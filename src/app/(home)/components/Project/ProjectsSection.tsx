@@ -1,3 +1,4 @@
+import { Project } from "@/@types/projects";
 import { ProjectItem } from "./ProjectItem";
 
 const listProjects = [
@@ -30,7 +31,11 @@ const listProjects = [
   },
 ];
 
-export const ProjectsSection = () => {
+type ProjectsSectionProps = {
+  projects: Project[];
+};
+
+export const ProjectsSection = ({ projects }: ProjectsSectionProps) => {
   return (
     <section id="projetos" className="w-full bg-gray-100">
       <div className="container grid h-full grid-cols-1 py-16 md:gap-10 md:py-28 lg:grid-cols-[256px_auto] lg:gap-16">
@@ -39,8 +44,8 @@ export const ProjectsSection = () => {
         </h2>
         <aside>
           <ul>
-            {listProjects.map((project) => {
-              return <ProjectItem key={project.id} {...project} />;
+            {projects.map((project) => {
+              return <ProjectItem key={project.slug} {...project} />;
             })}
           </ul>
         </aside>

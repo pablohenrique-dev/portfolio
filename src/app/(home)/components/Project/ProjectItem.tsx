@@ -1,20 +1,14 @@
 import { TechBadge } from "@/components/TechBadge";
 import { Image } from "@/components/Image";
 import Link from "next/link";
+import { Project } from "@/@types/projects";
 
-type ProjectItemProps = {
-  title: string;
-  slug: string;
-  deployUrl: string;
-  repositoryUrl: string;
-  projectThumb: string;
-  technologies: string[];
-};
+type ProjectItemProps = Project;
 
 export const ProjectItem = ({
   title,
   slug,
-  projectThumb,
+  thumbnail,
   technologies,
 }: ProjectItemProps) => {
   return (
@@ -23,8 +17,8 @@ export const ProjectItem = ({
         <h3 className="mb-2 text-[1.5rem] font-semibold text-black lg:text-[2rem]">
           {title}
         </h3>
-        {technologies.map((technology) => {
-          return <TechBadge key={technology}>{technology}</TechBadge>;
+        {technologies?.map((technology) => {
+          return <TechBadge key={technology.name}>{technology.name}</TechBadge>;
         })}
         <Link
           href={`/projetos/${slug}`}
@@ -34,7 +28,7 @@ export const ProjectItem = ({
         </Link>
       </div>
       <Image
-        src={projectThumb}
+        src={thumbnail.url}
         alt={`Imagem do projeto ${title}`}
         className="w-full transition-all md:translate-x-[342px] md:group-hover:translate-x-[1px]"
         priority
