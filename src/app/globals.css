@@ -12,12 +12,6 @@
   scroll-behavior: smooth;
 }
 
-/* html,
-body,
-svg {
-  height: 100%;
-} */
-
 svg {
   display: block;
   width: 100%;
