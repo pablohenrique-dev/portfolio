@@ -44,6 +44,12 @@ async function getPageData(): Promise<HomePageData> {
             }
           }
         }
+        about {
+          description {
+            raw
+          }
+          title
+        }
       }
     }
   `;
@@ -59,7 +65,7 @@ export default async function Home() {
       <HeroSection homeInfos={pageInfos} />
       <ProjectsSection projects={pageInfos.highlightProjects} />
       <CertificatesSection certificates={pageInfos.highlightCertificates} />
-      <About />
+      <About about={pageInfos.about} />
     </>
   );
 }

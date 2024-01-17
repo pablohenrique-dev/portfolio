@@ -1,3 +1,4 @@
+import { About } from "./about";
 import { Certificate } from "./certificate";
 import { Project } from "./projects";
 
@@ -7,8 +8,9 @@ export type HomePageInfo = {
   profilePicture: {
     url: string;
   };
-  highlightProjects: Project[]
-  highlightCertificates: Certificate[]
+  highlightProjects: Project[];
+  highlightCertificates: Certificate[];
+  about: About;
 };
 
 export type HomePageData = {

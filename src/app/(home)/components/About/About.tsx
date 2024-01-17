@@ -2,8 +2,14 @@ import React from "react";
 import { HoverText } from "./HoverText";
 import { Image } from "@/components/Image";
 import Link from "next/link";
+import { About as IAbout } from "@/@types/about";
+import { RichText } from "@/components/RichText/Index";
 
-export const About = () => {
+type AboutProps = {
+  about: IAbout;
+};
+
+export const About = ({ about }: AboutProps) => {
   return (
     <section id="sobre">
       <div className="container flex flex-col gap-16 py-16 md:flex-row md:items-center md:py-28 lg:gap-32">
@@ -21,22 +27,13 @@ export const About = () => {
         </aside>
         <article className="order-1 md:order-2">
           <h2 className="mb-8 text-4xl font-semibold text-black md:text-5xl">
-            Sobre mim
+            {about.title}
           </h2>
-          <p className="mb-4 opacity-75">
-            Olá, me chamo Pablo Henrique e tenho 23 anos. Desde criança sempre
-            fui apaixonado por tudo que envolvia tecnologia, com a curiosidade
-            de entender como as coisas eram feitas e funcionavam.
-            <br />
-            <br />
-            Nos últimos meses, venho me dedicando ao universo do desenvolvimento
-            web, criando aplicações com as melhores técnicas de desenvolvimento,
-            responsivas, com foco em acessibilidade e baixo tempo de
-            carregamento, garantindo a todos os usuários uma navegação fluida e
-            acessível.
-          </p>
+          <div className="mb-4 flex flex-col gap-3 opacity-75">
+            <RichText content={about.description.raw} />
+          </div>
           <Link
-            href="/assets/bg-home.jpg"
+            href="/assets/curriculo.pdf"
             target="_blank"
             download
             className="inline-block py-3 font-semibold transition hover:translate-x-2"
