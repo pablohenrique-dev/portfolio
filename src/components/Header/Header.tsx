@@ -8,15 +8,15 @@ import { Image } from "../Image";
 const linksNavMenu = [
   {
     title: "Projetos",
-    href: "#projetos",
+    href: "/#projetos",
   },
   {
     title: "Certificados",
-    href: "#certificados",
+    href: "/#certificados",
   },
   {
     title: "Sobre",
-    href: "#sobre",
+    href: "/#sobre",
   },
 ];
 
