@@ -1,5 +1,4 @@
-import { ProjectPageData } from "@/@types/pageInfo";
-import { AnchorLink } from "@/components/AnchorLink";
+import { ProjectPageData, ProjectsPageStaticData } from "@/@types/pageInfo";
 import { Image } from "@/components/Image";
 import { RichText } from "@/components/RichText/Index";
 import { TechBadge } from "@/components/TechBadge";
@@ -34,7 +33,7 @@ async function getProjectData(slug: string): Promise<ProjectPageData> {
     }
   `;
 
-  return fetchHygraphQuery(query);
+  return fetchHygraphQuery(query, 60 * 60 * 24);
 }
 
 export default async function Project({ params: { slug } }: ProjectProps) {
@@ -117,4 +116,18 @@ export default async function Project({ params: { slug } }: ProjectProps) {
       </div>
     </main>
   );
+}
+
+export async function generateStaticParams() {
+  const query = `
+    query ProjectsSlugsQuery {
+      projects(first: 100) {
+        slug
+      }
+    }
+  `;
+
+  const { projects } = await fetchHygraphQuery<ProjectsPageStaticData>(query);
+
+  return projects;
 }
