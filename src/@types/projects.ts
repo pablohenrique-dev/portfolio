@@ -14,6 +14,7 @@ type Technology = {
 export type Project = {
   title: string;
   slug: string;
+  conclusionDate: string;
   thumbnail: {
     url: string;
   };

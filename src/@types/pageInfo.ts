@@ -13,6 +13,10 @@ export type HomePageInfo = {
   about: About;
 };
 
+export type ProjectPageData = {
+  project: Project;
+};
+
 export type HomePageData = {
   page: HomePageInfo;
 };
