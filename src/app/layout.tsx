@@ -8,7 +8,10 @@ import { Footer } from "@/components/Footer";
 const epilogue = Epilogue({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Home | Pablo Henrique",
+  title: {
+    default: "Home | Pablo Henrique",
+    template: "%s | Pablo Henrique",
+  },
   description:
     "Um site de um desenvolvedor Front End, apaixonado pelo universo da tecnologia e dos games.",
 };

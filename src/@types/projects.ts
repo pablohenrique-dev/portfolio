@@ -21,6 +21,7 @@ export type Project = {
   technologies: Technology[];
   description: {
     raw: RichTextContent;
+    text: string;
   };
   pageThumbnail: {
     url: string;

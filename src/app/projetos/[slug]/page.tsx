@@ -3,6 +3,7 @@ import { Image } from "@/components/Image";
 import { RichText } from "@/components/RichText/Index";
 import { TechBadge } from "@/components/TechBadge";
 import { fetchHygraphQuery } from "@/utils/fetchHygraphQuery";
+import { Metadata } from "next";
 import Link from "next/link";
 
 type ProjectProps = {
@@ -20,11 +21,15 @@ async function getProjectData(slug: string): Promise<ProjectPageData> {
         pageThumbnail {
           url
         }
+        thumbnail {
+          url
+        }
         technologies {
           name
         }
         description {
           raw
+          text
         }
         githubUrl
         liveProjectUrl
@@ -130,4 +135,24 @@ export async function generateStaticParams() {
   const { projects } = await fetchHygraphQuery<ProjectsPageStaticData>(query);
 
   return projects;
+}
+
+export async function generateMetadata({
+  params: { slug },
+}: ProjectProps): Promise<Metadata> {
+  const { project } = await getProjectData(slug);
+
+  return {
+    title: project.title,
+    description: project.description.text,
+    openGraph: {
+      images: [
+        {
+          url: project.thumbnail.url,
+          width: 1200,
+          height: 630,
+        },
+      ],
+    },
+  };
 }
