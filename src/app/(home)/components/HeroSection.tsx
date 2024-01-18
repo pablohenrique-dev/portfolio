@@ -13,7 +13,7 @@ export const HeroSection = ({ homeInfos }: HeroSection) => {
       className="w-full bg-black bg-[url('/assets/bg-home.jpg')] bg-cover bg-no-repeat"
     >
       <div className="container flex flex-col items-center justify-between gap-8 pb-12 pt-10 sm:pb-[8rem] sm:pt-[6rem] lg:flex-row lg:gap-16">
-        <div>
+        <div className="animate-fade-left">
           <h1 className="mb-4 block text-[40px] font-semibold text-white sm:text-5xl sm:leading-tight md:text-[5rem]">
             {homeInfos.title}
             <Image
@@ -43,7 +43,7 @@ export const HeroSection = ({ homeInfos }: HeroSection) => {
         <Image
           src={homeInfos.profilePicture.url}
           alt="Selfie de jovem sentado em uma cadeira e sorrindo"
-          className="w-full md:min-w-[22rem] lg:w-[27rem]"
+          className="animate-fade-right w-full md:min-w-[22rem] lg:w-[27rem]"
         />
       </div>
     </main>

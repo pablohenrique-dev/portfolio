@@ -50,12 +50,12 @@ export default async function Project({ params: { slug } }: ProjectProps) {
         <div className="container flex flex-col items-start border-gray-600 py-16 sm:flex-row sm:justify-between md:py-20">
           <h1
             style={{ lineHeight: "130%" }}
-            className="order-2 text-[40px] font-bold text-white sm:order-1 sm:w-[700px] sm:text-5xl md:text-[5rem]"
+            className="animate-fade-left order-2 text-[40px] font-bold text-white sm:order-1 sm:w-[700px] sm:text-5xl md:text-[5rem]"
           >
             {project.title}
           </h1>
 
-          <div className="order-1 mb-8 sm:order-2 sm:mb-0">
+          <div className="animate-fade-right order-1 mb-8 sm:order-2 sm:mb-0">
             <h4 className="mb-3 text-base font-thin uppercase tracking-[.25em] text-gray-100">
               DATA
             </h4>
@@ -65,11 +65,11 @@ export default async function Project({ params: { slug } }: ProjectProps) {
           </div>
         </div>
       </div>
-      <div>
+      <div className="">
         <Image
           src={project.pageThumbnail.url}
           alt={`Imagem do projeto ${project.title}`}
-          className="h-[300px] w-full md:h-[560px]"
+          className="animate-fade-in h-[300px] w-full md:h-[560px]"
         />
       </div>
       <div className="container grid grid-cols-1 gap-10 py-16 md:grid-cols-[430px_auto] md:py-20 lg:gap-20">
