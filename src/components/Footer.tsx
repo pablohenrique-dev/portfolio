@@ -2,6 +2,24 @@ import React from "react";
 import { Image } from "./Image";
 import Link from "next/link";
 
+const socialLinks = [
+  {
+    title: "GitHub",
+    href: "https://github.com/pablohenrique-dev",
+    icon: "/assets/icon-github.svg",
+  },
+  {
+    title: "LinkedIn",
+    href: "https://www.linkedin.com/in/pablohdsouza/",
+    icon: "/assets/icon-linkedin.svg",
+  },
+  {
+    title: "Currículo",
+    href: "/assets/curriculo.pdf",
+    icon: "/assets/icon-file.svg",
+  },
+];
+
 export const Footer = () => {
   return (
     <footer className="relative bg-black py-10 sm:py-20">
@@ -26,21 +44,22 @@ export const Footer = () => {
 
           <div className="flex flex-col items-start gap-8 min-[400px]:flex-row min-[400px]:items-center md:order-3">
             <div className="flex justify-start gap-8">
-              <Image
-                src="/assets/close-icon.svg"
-                alt="Logo com texto Pablo Henrique"
-                className="w-[24px]"
-              />
-              <Image
-                src="/assets/close-icon.svg"
-                alt="Logo com texto Pablo Henrique"
-                className="w-[24px]"
-              />
-              <Image
-                src="/assets/close-icon.svg"
-                alt="Logo com texto Pablo Henrique"
-                className="w-[24px]"
-              />
+              {socialLinks.map((link) => {
+                return (
+                  <Link
+                    key={link.title}
+                    href={link.href}
+                    title={link.title}
+                    target="_blank"
+                  >
+                    <Image
+                      src={link.icon}
+                      alt={`Logo do ícone ${link.title}`}
+                      className="w-[24px]"
+                    />
+                  </Link>
+                );
+              })}
             </div>
 
             <Link

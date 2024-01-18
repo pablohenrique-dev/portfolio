@@ -24,7 +24,7 @@ export const Header = () => {
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = React.useState(false);
   return (
     <header className="w-full bg-black">
-      <div className="container flex items-center justify-between py-6 md:py-8">
+      <div className="animate-fade-bottom container flex items-center justify-between py-6 md:py-8">
         <Link href="/">
           <Image
             src="/assets/logo.svg"
