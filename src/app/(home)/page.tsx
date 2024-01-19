@@ -54,7 +54,7 @@ async function getPageData(): Promise<HomePageData> {
     }
   `;
 
-  return fetchHygraphQuery(query);
+  return fetchHygraphQuery(query, 60 * 60 * 24);
 }
 
 export default async function Home() {
