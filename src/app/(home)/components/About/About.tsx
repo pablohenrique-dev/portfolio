@@ -35,7 +35,6 @@ export const About = ({ about }: AboutProps) => {
           <Link
             href="/assets/curriculo.pdf"
             target="_blank"
-            download
             className="inline-block py-3 font-semibold transition hover:translate-x-2"
           >
             Baixar currículo

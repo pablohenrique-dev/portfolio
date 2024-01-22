@@ -4,6 +4,7 @@ import "./globals.css";
 import "keen-slider/keen-slider.min.css";
 import { Header } from "@/components/Header/Header";
 import { Footer } from "@/components/Footer";
+import { SplashScreen } from "@/components/SplashScreen/Index";
 
 const epilogue = Epilogue({ subsets: ["latin"] });
 
@@ -27,6 +28,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <SplashScreen />
       </body>
     </html>
   );
