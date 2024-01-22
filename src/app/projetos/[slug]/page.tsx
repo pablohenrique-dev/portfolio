@@ -96,7 +96,7 @@ export default async function Project({ params: { slug } }: ProjectProps) {
                   alt="Ícone do github"
                   className="h-5 w-4"
                 />
-                Repósitório
+                Repositório
               </Link>
             )}
             {project.liveProjectUrl && (
