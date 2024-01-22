@@ -39,6 +39,10 @@ const config: Config = {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
+        "splash-screen": {
+          "0%": { height: "100vh" },
+          "100%": { height: "0" },
+        },
       },
       animation: {
         "fade-right": "fade-right .5s ease-in-out",
@@ -46,6 +50,7 @@ const config: Config = {
         "fade-bottom": "fade-bottom .5s ease-in-out",
         "fade-top": "fade-top .5s ease-in-out",
         "fade-in": "fade-in .5s ease-in-out",
+        "splash-screen": "splash-screen .5s 3.3s ease-in-out forwards",
       },
     },
   },
