@@ -10,7 +10,7 @@ export const HeroSection = ({ homeInfos }: HeroSection) => {
   return (
     <main
       id="top"
-      className="w-full bg-black bg-[url('/assets/bg-home.jpg')] bg-cover bg-no-repeat"
+      className="w-full overflow-x-hidden bg-black bg-[url('/assets/bg-home.jpg')] bg-cover bg-no-repeat"
     >
       <div className="container flex flex-col items-center justify-between gap-8 pb-12 pt-10 sm:pb-[8rem] sm:pt-[6rem] lg:flex-row lg:gap-16">
         <div className="animate-fade-left">
@@ -43,7 +43,7 @@ export const HeroSection = ({ homeInfos }: HeroSection) => {
         <Image
           src={homeInfos.profilePicture.url}
           alt="Selfie de jovem sentado em uma cadeira e sorrindo"
-          className="animate-fade-right w-full md:min-w-[22rem] lg:w-[27rem]"
+          className="w-full animate-fade-right md:min-w-[22rem] lg:w-[27rem]"
         />
       </div>
     </main>
