@@ -31,7 +31,7 @@ export const SplashScreen = () => {
 
     const closeSplashScreenTimeout = setTimeout(() => {
       setIsSplashScreenOpen(false);
-    }, greetings.length * 200);
+    }, greetings.length * 250);
 
     return () => {
       clearInterval(nextGreetingInterval);

@@ -50,7 +50,7 @@ const config: Config = {
         "fade-bottom": "fade-bottom .5s ease-in-out",
         "fade-top": "fade-top .5s ease-in-out",
         "fade-in": "fade-in .5s ease-in-out",
-        "splash-screen": "splash-screen .5s 3.3s ease-in-out forwards",
+        "splash-screen": "splash-screen .5s 3s ease-in-out forwards",
       },
     },
   },
