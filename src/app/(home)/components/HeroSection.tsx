@@ -35,7 +35,10 @@ export const HeroSection = ({ homeInfos }: HeroSection) => {
                 className="h-[15px] w-[15px]"
               />
             </AnchorLink>
-            <AnchorLink href="#contatos" anchorStyle="secondary">
+            <AnchorLink
+              href="mailto:pablohdsouza.dev@gmail.com"
+              anchorStyle="secondary"
+            >
               Entrar em contato
             </AnchorLink>
           </div>
