@@ -24,6 +24,7 @@ export const CertificatesSlide = ({
     created() {
       setLoaded(true);
     },
+    mode: "free-snap",
     defaultAnimation: {
       duration: 200,
     },
