@@ -46,8 +46,8 @@ export const Header = () => {
         </button>
 
         <nav
-          className={`fixed bottom-0 left-0 h-[100vh] w-full translate-y-[100vh] overflow-hidden bg-black px-5 pt-6 transition-all md:static md:h-fit md:w-fit md:translate-y-[0px] md:p-0 ${
-            mobileMenuIsOpen && "z-50 translate-y-[1px]"
+          className={`fixed bottom-0 left-0 h-dvh w-full mobile-menu-closed overflow-hidden bg-black px-5 pt-6 transition-all md:static md:h-fit md:w-fit md:translate-y-[0px] md:p-0 ${
+            mobileMenuIsOpen && "mobile-menu-open"
           }`}
         >
           <div className="flex items-center justify-between md:hidden">

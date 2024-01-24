@@ -6,6 +6,15 @@
   .container {
     @apply mx-auto max-w-[78.5rem] px-5;
   }
+
+  .mobile-menu-closed {
+    transform: translateY(100dvh);
+  }
+  
+  .mobile-menu-open {
+    transform: translateY(0dvh);
+    z-index: 9999;
+  }
 }
 
 * {
