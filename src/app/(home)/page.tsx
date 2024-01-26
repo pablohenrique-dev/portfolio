@@ -49,6 +49,9 @@ async function getPageData(): Promise<HomePageData> {
             raw
           }
           title
+          resume {
+            url
+          }
         }
       }
     }

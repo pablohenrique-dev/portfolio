@@ -33,7 +33,7 @@ export const About = ({ about }: AboutProps) => {
             <RichText content={about.description.raw} />
           </div>
           <Link
-            href="/assets/curriculo.pdf"
+            href={about.resume.url}
             target="_blank"
             className="inline-block py-3 font-semibold transition hover:translate-x-2"
           >

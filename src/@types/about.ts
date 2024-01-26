@@ -5,4 +5,7 @@ export type About = {
     raw: RichTextContent;
   };
   title: string;
+  resume: {
+    url: string;
+  };
 };

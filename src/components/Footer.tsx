@@ -13,11 +13,6 @@ const socialLinks = [
     href: "https://www.linkedin.com/in/pablohdsouza/",
     icon: "/assets/icon-linkedin.svg",
   },
-  {
-    title: "Currículo",
-    href: "/assets/curriculo.pdf",
-    icon: "/assets/icon-file.svg",
-  },
 ];
 
 export const Footer = () => {
