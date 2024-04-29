@@ -13,6 +13,15 @@ export const metadata: Metadata = {
     default: "Home | Pablo Henrique",
     template: "%s | Pablo Henrique",
   },
+  openGraph: {
+    images: [
+      {
+        url: "/assets/metatag-image.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
   description:
     "Um site de um desenvolvedor Front End, apaixonado pelo universo da tecnologia e dos games.",
 };
