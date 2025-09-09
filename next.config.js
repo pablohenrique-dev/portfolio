@@ -1,7 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    remotePatterns: [{ hostname: "media.graphassets.com" }],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "media.graphassets.com",
+      },
+      {
+        protocol: "https",
+        hostname: "sa-east-1.graphassets.com",
+      },
+    ],
   },
 };
 
